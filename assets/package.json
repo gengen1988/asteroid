@@ -1,0 +1,11 @@
+{
+  "name": "helloworld",
+  "main": "index.html",
+  "window": {
+    "width": 800,
+    "height": 600,
+
+    "frame": false,
+    "toolbar": false
+  }
+}

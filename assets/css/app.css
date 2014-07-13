@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  background-color: #333;
+}
+
+.shutdown {
+  float: right;
+}
+
+.sidebar {
+  float: left;
+  width: 100px;
+  background-color: #666;
+  height: 100%;
+}
