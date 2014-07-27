@@ -1,28 +1,36 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  -webkit-app-region: no-drag;
-}
-
-.header {
-  width: 100%;
+#app-titlebar {
+  color: #999;
   position: fixed;
-  -webkit-app-region: drag;
-  -webkit-user-select: none;
   background-color: #333;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  padding: 0 16px;
+
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
 }
 
-.shutdown {
-  float: right;
-}
-
-.sidebar {
-  float: left;
-  width: 100px;
-  background-color: #666;
+html, body, #app-content {
   height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.button {
+  margin: 0 4px;
+  padding: 16px 24px;
+  text-align: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  background-color: black;
+}
+
+.subtitle {
+  font-size: 12px;
 }

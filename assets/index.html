@@ -2,20 +2,35 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link href="bower_components/normalize-css/normalize.css" rel="stylesheet">
+  <link href="bower_components/fontawesome/css/font-awesome.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <button class="shutdown" onclick="window.close()">X</button>
-    <button class="shutdown" onclick="window.close()">[]</button>
-    <button class="shutdown" onclick="window.close()">_</button>
-    <div style="clear: both;"></div>
+  <div id="app-titlebar">
+    <div class="button shutdown pull-right">
+      <div class="fa fa-2x fa-power-off"></div>
+      <div class="subtitle">Exit</div>
+    </div>
+    <div class="button fullscreen pull-right">
+      <div class="fa fa-2x fa-desktop"></div>
+      <div class="subtitle">Fullscreen</div>
+    </div>
+    <div class="button debug pull-right">
+      <div class="fa fa-2x fa-bug"></div>
+      <div class="subtitle">Debug</div>
+    </div>
+    <div class="button reload pull-right">
+      <div class="fa fa-2x fa-refresh"></div>
+      <div class="subtitle">Reset</div>
+    </div>
   </div>
+  <div id="app-content"></div>
 
-  <div class="sidebar"></div>
-
-  <script></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/phaser-official/build/phaser.js"></script>
+  <script src="bower_components/requirejs/require.js" data-main="js/main"></script>
 </body>
 </html>
