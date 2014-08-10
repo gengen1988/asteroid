@@ -1,6 +1,6 @@
 {
   "name": "hello",
-  "main": "startup.html",
+  "main": "assets/startup.html",
   "node-remote": "<local>",
   "window": {
     "width": 800,
@@ -8,5 +8,10 @@
     "toolbar": false,
     "frame": false,
     "resizable": false
+  },
+  "devDependencies": {
+    "express": "^4.8.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-requirejs": "^0.4.4"
   }
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  body {
+    width: 100%;
+    background: black;
+    display: table;
+  }
+
+  .loading {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="loading">Loading...</div>
+  <script>
+    var express = require('express');
+    var path = require('path');
+    var app = express();
+
+    app.use('/bower_components', express.static(path.join('..', 'bower_components')));
+    app.use(express.static(path.join('.')));
+
+    app.listen(1337, function () {
+      console.log('ok');
+      window.location = 'http://127.0.0.1:1337';
+    });
+  </script>
+</body>
+</html>
